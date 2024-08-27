@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+* {
+    font-family: 'Pretendard-Regular';
+}
+
+body {
+    background-image: url(image/background.jpg);
+    background-size : cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.leftmain {
+    width : 397px;
+    height : 1750px;
+    float:left;
+    background-color: rgba(151, 182, 221, 0.5);
+    /* 내부(상하좌우)를 중앙정렬하는 좋은 세트 3가지 // 가장 부모 영역에 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    border-radius: 25px;
+}
+
+.sidebar {
+    background-color: 679FE7px;
+    width :358px;
+    height : 1750px;
+    float:left;
+    background-color: rgba(103, 159, 231, 0.5);
+    border-radius: 50px;
+}
+
+#blossom {
+    border-radius: 50px;
+    width:358px;
+    height:110px;
+}
+
+#pearly {
+    width : 100%;
+    margin-top:-180px;
+}
+
+.profile {
+    margin-top: -500px;
+    width : 200px;
+    border-radius: 9999px;
+    z-index : 1; /* 이건 약간 어떤게 더 앞으로 오고 어떤게 더 뒤로가는 순서를 정하는 것 같다. */
+    position: absolute;
+}
+
+#welcome {
+    margin-top: -1200px;
+    position : absolute;
+    font-size : 30px;
+    font-weight: 700;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+.visit {
+    text-align: center;
+    color :white;
+    margin-top: -800px;
+    position : absolute;
+    background-color: rgba(79, 146, 122, 0.5);
+    width : 300px;
+    height : 250px;
+    border-radius: 50px;
+}
+
+#category {
+    background-color: rgba(103, 159, 231, 0.75);
+    width : 335px;
+    height : 1000px;
+    border-radius: 50px;
+    margin-top: 500px;
+    position:absolute;
+    border: 2px solid rgb(90, 111, 182);
+}
+
+li {
+    list-style-type:none;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+.main {
+    border-radius: 50px;
+    margin-left: 400px;
+    width:1960px;
+    height:1700px;
+    background-image: url(image/background/bubble.jpg);
+    background-size: cover;
+    opacity:0.5;
+    position : absolute;
+    animation : fadein ease 15s;
+    animation-fill-mode:forwards;
+}
+
+.main2 {
+    border-radius: 50px;
+    margin-left: 400px;
+    width:1960px;
+    height:1700px;
+    background-image: url(image/background/nature.jpg);
+    background-size: cover;
+    opacity:0.5;
+    position : absolute;
+    animation : fadeout ease 10s;
+    animation-fill-mode:forwards;
+}
+
+.main3 {
+    border-radius: 50px;
+    margin-left: 400px;
+    width:1960px;
+    height:1700px;
+    background-image: url(image/background/morning.jpg);
+    background-size: cover;
+    opacity:0.5;
+    position : absolute;
+    animation : fadeout ease 10s;
+    animation-fill-mode:forwards;
+}
+
+.main4 {
+    border-radius: 50px;
+    margin-left: 400px;
+    width:1960px;
+    height:1700px;
+    background-image: url(image/background/bubble2.jpg);
+    background-size: cover;
+    opacity:0.5;
+    position : absolute;
+    animation : fadeout2 ease 5s;
+    animation-fill-mode:forwards;
+}
+
+.main5 {
+    border-radius: 50px;
+    margin-left: 400px;
+    width:1960px;
+    height:1700px;
+    background-image: url(image/background/town.jpg);
+    background-size: cover;
+    opacity:0.5;
+    position : absolute;
+    animation : fadeout ease 15s;
+    animation-fill-mode:forwards;
+}
+
+.main6 {
+    border-radius: 50px;
+    margin-left: 400px;
+    width:1960px;
+    height:1700px;
+    background-image: url(image/background/snowhouse.jpg);
+    background-size: cover;
+    opacity:0.5;
+    position : absolute;
+    animation : fadeout2 ease 10s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+    }
+    @keyframes fadeout2 {
+        from {
+          opacity: 0.5;
+        }
+        to {
+          opacity: 0;
+        }
+        }
+
+    @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 0.5;
+        }
+        }
+/* 눈 내려요 */
+.snow {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 3px white;
+    z-index: 1;
+  }
+/* 끝 */
+
+.footer {
+    /* 가장 하단으로 내리는 명령어 두가지인데 이상하게 더 내려가지 않았다. */
+    position: absolute; /* flex는 사용하면 스크롤이 많아지면 문제가 생긴다. */
+    margin-top:1700px;
+    margin-left : 1100px;
+    font-size : 20px;
+    font-weight: 400;
+    text-align: center;
+    color:white;
+    text-shadow : 15px 15px 25px black;
+    border: 5px solid rgb(109, 222, 241);
+    border-radius: 15px;
+    /* 다른 명령어 추가로 푸터자리로 맞춤 */
+}

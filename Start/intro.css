@@ -1,148 +1,184 @@
 /* 배경 지정 및 페이드 인 아웃 시작 */
-.main {
-    width : 1920px;
-    height : 1080px;
-    background-image : url(image/background.jpg);
-    background-size : cover;
-    animation: fadein 10s;
-    -moz-animation: fadein 10s;
-    -webkit-animation: fadein 10s;
-    -o-animation: fadein 10s;
-    justify-content: center;
-    align-items: center;
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Pretendard-Regular';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(image/background.jpg);
+  background-size : cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  height: 200px;
+  width: 300px;
+  background-color: #3760C9;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+
+.wrapper:hover {
+  animation : wiggle 5s;
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0); /* rotate는 기울임을 줄 수 있고 translateY는 위치를 변경해줄 수 있었다. 여기서는 필요없어서 뺐다. */
+  }
+  
+  25% {
+    transform: rotate(5deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+  
+  100% {
+    transform: rotate(0);
+  }
+}
+
+
+.lid {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one {
+  border-top: 100px solid #658ced;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two {
+  border-top: 100px solid #3760C9;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid rgb(232, 241, 252);
+  border-bottom: 100px solid rgb(152, 187, 218);
+  border-left: 150px solid rgb(119, 154, 184);
+  z-index: 3;
+}
+
+.letter {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.letter p {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.wrapper:hover .lid.one {
+    transform: rotateX(90deg);
+    transition-delay: 0s;
+}
+
+.wrapper:hover .lid.two {
+    transform: rotateX(180deg);
+    transition-delay: 0.25s;
+}
+
+.wrapper:hover .letter {
+  transform: translateY(-50px);
+  transition-delay: 0.5s;
+}
+span {
+  font-size : 50px;
+}
+
+.hello {
+  margin-left : 62px;
+  position:absolute;
+  animation: fadeout ease 4s;
+  animation-delay : 2s;
+  animation-fill-mode : forwards; /*이걸 사용해야 페이드 아웃 후에 다시 돌아오지 않음 // 애니메이션 끝을 정하는 설정 */
+}
+
+@keyframes fadeout {
+from {
+  opacity: 1;
+}
+to {
+  opacity: 0;
+}
+}
+
+.enter {
+  text-decoration-line : none;
+  text-decoration-color : magenta;
+  font-size : 50px;
+  line-height: 100px;
+  text-align: center;
+  width : 240px;
+  height : 170px;
+  position:absolute;
+  border : 10px solid rgb(92, 84, 212);
+  border-radius : 15px;
+  animation:fadein 10s;
+  animation-fill-mode : forwards; /*필수*/
 
 }
 @keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-/* 페이드 인 아웃 끝 */
-
-@keyframes upthenscale {
-    0% {
-      transform: translateY(250px);
-    }
-    
-    50% {
-      transform: translateY(0);
-    }
-    
-    60% {
-      height: 100px;
-      width: 90px;
-      transform: translateY(0);
-    }
-    
-    100% { 
-      height:  250px;
-      width: 100%; 
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
   }
-  
-  @keyframes scalethendown {
-    0% {
-      height:  250px;
-      width: 100%; 
-      transform: translateY(0);
-    }
-    
-    50% {
-      height: 100px;
-      width: 90px;
-      transform: translateY(0);
-    }
-    
-    60% {
-      transform: translateY(0);
-    }
-    
-    100% { 
-      transform: translateY(250px);
-    }
+  to {
+    opacity: 1;
   }
-  
-  @keyframes waitfade {
-    0%, 50% {
-      opacity: 0;
-    }
-    
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes wiggle {
-    0% {
-      transform: translateY(310px) rotate(0);
-    }
-    
-    25% {
-      transform: translateY(310px) rotate(2deg);
-    }
-    
-    50% {
-      transform: translateY(310px) rotate(0deg);
-    }
-    
-    75% {
-      transform: translateY(310px) rotate(-2deg);
-    }
-    
-    100% {
-      transform: translateY(310px) rotate(0);
-    }
-  }
-  /* 편지 */
-  .wrapper {
-    height: 500px;
-    width : 600px;
-    background-color: rgb(76, 70, 187);
-    background: linear-gradient(90deg, rgb(143, 138, 240) 0%, rgba(9,9,121,1) 43%, rgba(0,212,255,1) 100%);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
   }
 
-  .letter {
-    position: absolute;
-    width : 80%;
-    height: 80%;
-    background-color: white;
-    border-radius: 25px;
-    z-index : 2;
-
+  .shadow {
+    position : absolute;
+    width : 500px;
+    height : 50px;
+    margin-bottom : -100px;
+    margin-left : 100px;
+    background : radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   }

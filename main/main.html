@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="leftmain">
+    <div class="sidebar"><img id="blossom" src="image/logo.png"><img id="pearly" src="image/logoname.png"></div>
+        <div class="profile"><img class="profile" src="image/profile.jfif"></div>
+        <p id="welcome">Hello<span id="welcome2">!</span></p>
+        <div class="visit">
+            <h2 style="text-shadow:5px 5px 10px black;">공지사항</h1>
+                <ul>
+                    <li style="margin-left:-52px;">❕ 필독</li>
+                    <li style="margin-left:-52px;">❔ 질문사항</li>
+                    <li style="margin-left:-52px;">✔ 문의사항</li>
+                    <li style="margin-left:-52px;">✅ 도움요청</li>
+                    <li style="margin-left:-52px;"><a style="text-decoration-line: none; color:violet; text-shadow: 2px 2px 10px black;" href="game.html">💻미니게임</a></li>
+                </ul>
+        </div>
+        <div id="category">
+            <ul>
+                <li style="font-size :40px; font-weight:1000; text-shadow: 5px 2px 20px white; margin-left: 10px;">Tech Stack</li>
+                <br>
+                <li style="list-style-image:url(image/bullet/HTML.png); margin-left: 12px;">HTML</li>
+                <li style="list-style-image:url(image/bullet/CSS.png); margin-left: 12px;">CSS</li>
+                <li style="list-style-image:url(image/bullet/JS.png); margin-left: 12px;">JavaScript</li>
+                <li style="list-style-image:url(image/bullet/JAVA.png); margin-left: 12px;">JAVA</li>
+                <li style="list-style-image:url(image/bullet/C.png); margin-left: 12px;">C</li>
+                <li style="list-style-image:url(image/bullet/CC.png); margin-left: 12px;">C#</li>
+                <li style="list-style-image:url(image/bullet/C++.png); margin-left: 12px;">C++</li>
+                <li style="list-style-image:url(image/bullet/Python.png); margin-left: 12px;">Python</li>
+            </ul>
+            <hr style="border:5px solid white; border-radius: 100px;">
+            <ul>
+                <li style="font-size :40px; font-weight:1000; text-shadow: 5px 2px 20px white; margin-left: 10px;">Tip</li>
+                <br>
+                <li style="list-style-image:url(image/bullet/github.png); margin-left: 12px;">For Github</li>
+                <li style="list-style-image:url(image/bullet/computer.png); margin-left: 12px;">For Computer</li>
+                <li style="list-style-image:url(image/bullet/internet.png); margin-left: 12px;">For Website</li>
+                <li style="list-style-image:url(image/bullet/programming.png); margin-left: 12px;">For Programming</li>
+                <li style="list-style-image:url(image/bullet/A.I.png); margin-left: 12px;">For A.I</li>
+                <li style="list-style-image:url(image/bullet/Study.png); margin-left: 12px;">For Study</li>
+                <li style="list-style-image:url(image/bullet/Blog.png); margin-left: 12px;">For Blog</li>
+            </ul>
+            <hr style="border:5px solid black; border-radius: 100px">
+            <ul>
+                <li style="font-size :40px; font-weight:1000; text-shadow: 5px 2px 20px white; margin-left: 10px;">Etc.</li>
+                <br> <!-- 리스트 이미지는 크기 조절이 가능하지 않다. 직접 조정해서 가져와야 하는 단점과 번거로움이 있음 -->
+                <li style="list-style-image:url(image/bullet/rest.png); margin-left: 12px;">Rest</li>
+                <li style="list-style-image:url(image/bullet/game.png); margin-left: 12px;">Game</li>
+                <li style="list-style-image:url(image/bullet/exercise.png); margin-left: 12px;">Exercise</li>
+                <li style="list-style-image:url(image/bullet/info.png); margin-left: 12px;">Information</li>
+                <li style="list-style-image:url(image/bullet/news.png); margin-left: 12px;">News</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main"></div>
+<div class="main2"></div>
+<div class="main3"></div>
+<div class="main4"></div>
+<div class="main5"></div>
+<div class="main6"></div>
+<div class="footer">© 2024 Pear1yCode All rights Reserved. <br> gh_wns@naver.com </div>
+<!-- 눈 내려요 자바스크립트 -->
+<script>
+for (let i = 0; i < 200; i++) {
+  const snow = document.createElement("div");
+  snow.className = "snow";
+  snow.style.opacity = Math.random();
+
+  const startX = Math.random() * 100;
+  const endX = startX + (Math.random() * 20 - 10);
+  const scale = Math.max(Math.random(), 0.5);
+
+  const keyframe = [
+    { transform: `translate(${startX}vw, 0) scale(${scale})` },
+    { transform: `translate(${endX}vw, 100vh) scale(${scale})` },
+  ];
+  const option = {
+    duration: 15000,
+    easing: "linear",
+    iterations: Infinity,
+    delay: -Math.random() * 20 * 1000,
+  };
+  snow.animate(keyframe, option);
+
+  document.body.appendChild(snow);
+}
+</script>
+<!-- 눈내려요 끝 -->
+</body>
+</html>
