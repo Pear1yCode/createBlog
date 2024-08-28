@@ -14,6 +14,57 @@ body {
     background-size : cover;
     height: 100vh;
     width: 100%;
+    position: relative;
+}
+.announcement:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.game {
+    margin-left:-52px;
+}
+
+.game:hover {
+    animation: hoverwiggle ease-in 2s;
+}
+
+@keyframes hoverwiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.games {
+    color:violet;
+}
+
+li:hover {
+    animation: liwiggle ease-in 2s;
+    color: aqua;
+    cursor: pointer;
+    text-shadow: 10px 10px 15px black;
+}
+
+@keyframes liwiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .leftmain {
@@ -96,8 +147,8 @@ li {
 .main {
     border-radius: 50px;
     margin-left: 400px;
-    width:1960px;
-    height:1700px;
+    width:1490px;
+    height:1625px;
     background-image: url(image/background/bubble.jpg);
     background-size: cover;
     opacity:0.5;
@@ -109,8 +160,8 @@ li {
 .main2 {
     border-radius: 50px;
     margin-left: 400px;
-    width:1960px;
-    height:1700px;
+    width:1490px;
+    height:1625px;
     background-image: url(image/background/nature.jpg);
     background-size: cover;
     opacity:0.5;
@@ -122,8 +173,8 @@ li {
 .main3 {
     border-radius: 50px;
     margin-left: 400px;
-    width:1960px;
-    height:1700px;
+    width:1490px;
+    height:1625px;
     background-image: url(image/background/morning.jpg);
     background-size: cover;
     opacity:0.5;
@@ -135,8 +186,8 @@ li {
 .main4 {
     border-radius: 50px;
     margin-left: 400px;
-    width:1960px;
-    height:1700px;
+    width:1490px;
+    height:1625px;
     background-image: url(image/background/bubble2.jpg);
     background-size: cover;
     opacity:0.5;
@@ -148,8 +199,8 @@ li {
 .main5 {
     border-radius: 50px;
     margin-left: 400px;
-    width:1960px;
-    height:1700px;
+    width:1490px;
+    height:1625px;
     background-image: url(image/background/town.jpg);
     background-size: cover;
     opacity:0.5;
@@ -161,8 +212,8 @@ li {
 .main6 {
     border-radius: 50px;
     margin-left: 400px;
-    width:1960px;
-    height:1700px;
+    width:1490px;
+    height:1625px;
     background-image: url(image/background/snowhouse.jpg);
     background-size: cover;
     opacity:0.5;
@@ -199,8 +250,8 @@ li {
 /* 눈 내려요 */
 .snow {
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 20px;
+    height: 20px;
     background: white;
     border-radius: 50%;
     box-shadow: 0 0 3px 3px white;
@@ -211,14 +262,164 @@ li {
 .footer {
     /* 가장 하단으로 내리는 명령어 두가지인데 이상하게 더 내려가지 않았다. */
     position: absolute; /* flex는 사용하면 스크롤이 많아지면 문제가 생긴다. */
-    margin-top:1700px;
-    margin-left : 1100px;
+    /* /* margin-top:1650px; */
+    margin-left : 397px;
     font-size : 20px;
     font-weight: 400;
     text-align: center;
     color:white;
     text-shadow : 15px 15px 25px black;
-    border: 5px solid rgb(109, 222, 241);
+    width : 1485px;
+    height: 100px;
+    border: 5px solid rgba(109, 222, 241, 0.7);
     border-radius: 15px;
+    margin-top : 1625px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    border-radius: 25px;
+    line-height: 25px;
     /* 다른 명령어 추가로 푸터자리로 맞춤 */
+}
+
+/* 플로팅 버튼 */
+
+.float-button-container {
+	z-index: 1000;
+	position: fixed;
+	transform: translate(-50%, 0%);
+	left: 97.5%;
+	bottom: 30px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+
+	height: 40px;
+	border-radius: 9999px;
+	text-decoration: none !important;
+}
+
+.float-button {
+	display: flex;
+	align-items: center;
+	width: 70px;
+    height : 70px;
+    border-radius: 9999px;
+	cursor: pointer;
+}
+
+.float-button:hover {
+	animation : wiggle 2s;
+}
+  @keyframes wiggle {
+    0% {
+      transform: translate(0%, 0%) rotate(0);
+    }
+    
+    25% {
+      transform: translate(0%, -20%) rotate(-5deg);
+    }
+  
+    75% {
+      transform: translate(0%, -20%) rotate(5deg);
+      
+    }
+    
+    100% {
+      transform: translate(0%, 0%) rotate(0);
+    }
+  }
+
+  /* 각 버튼 이미지를 나누었다. 그냥하려고 했으나 이미지가 조금씩 눌려보여서 조정을 위해 나눔 */
+.float_button_image {
+    width: 50px;
+	height: 60px;
+    transform: translateX(2px); 
+}
+
+.float_button_image2 {
+    width: 300px;
+	height: 75px;
+    transform: translateX(-9.5px); 
+}
+
+.float_button_image3 {
+    width: 50px;
+	height: 50px;
+    transform: translateX(2px); 
+}
+
+.float_button_image4 {
+    width: 100px;
+	height: 50px;
+}
+
+.float_button_image5 {
+    width: 100px;
+	height: 65px;
+    transform: translateX(-5px); 
+}
+/* hello라는 온클릭 이벤트 생성 및 세부 설정 - 자바스크립트로 온클릭을 만든 상태에서 행함
+    직접 만들었다.
+*/
+.hello {
+    transform :translateY(-90px);
+    animation : ease buttonfadein 1s;
+    animation-fill-mode: forwards;
+}
+.hello2 {
+    transform :translateY(-180px);
+    animation : ease buttonfadein 1s;
+    animation-fill-mode: forwards;
+}
+.hello3 {
+    transform :translateY(-270px);
+    animation : ease buttonfadein 1s;
+    animation-fill-mode: forwards;
+}
+.hello4 {
+    transform :translateY(-360px);
+    animation : ease buttonfadein 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes buttonfadein {
+    0% {
+        opacity : 0%;
+    }
+
+    100% {
+        opacity : 100%;
+    }
+}
+.float-button-container2 {
+	z-index: 990;
+	position: fixed;
+	left: 95.65%;
+	bottom: 15px;
+    opacity : 0%;
+}
+.float-button-container3 {
+	z-index: 990;
+	position: fixed;
+	left: 95.65%;
+	bottom: 15px;
+    opacity : 0%;
+}
+.float-button-container4 {
+	z-index: 990;
+	position: fixed;
+	left: 95.65%;
+	bottom: 15px;
+    opacity : 0%;
+}
+.float-button-container5 {
+	z-index: 990;
+	position: fixed;
+	left: 95.65%;
+	bottom: 15px;
+    opacity : 0%;
 }

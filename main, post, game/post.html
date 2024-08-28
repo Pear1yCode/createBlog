@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="post.css">
+</head>
+<body>
+<div class="leftmain">
+    <div class="sidebar"><img id="blossom" src="image/logo.png"><img id="pearly" src="image/logoname.png"></div>
+        <div class="profile"><a href="https://github.com/Pear1yCode"><img class="profile" src="image/profile.jfif"></a></div>
+        <p id="welcome">Hello<span id="welcome2">!</span></p>
+        <div class="visit">
+            <h2 class="announcement" style="text-shadow:5px 5px 10px black; text-decoration: underline; text-decoration-color: white ; text-decoration-thickness: 15px;">공지사항</h1>
+                <ul>
+                    <li class="announcement" style="margin-left:-52px;">❕ 필독</li>
+                    <li class="announcement" style="margin-left:-52px;">❔ 질문사항</li>
+                    <li class="announcement" style="margin-left:-52px;">✔ 문의사항</li>
+                    <li class="announcement" style="margin-left:-52px;">✅ 도움요청</li>
+                    <li class="game"><a class="games" style="text-decoration-line: none; text-shadow: 2px 2px 10px black ;" href="game.html">💻 미니게임</a></li>
+                </ul>
+        </div>
+        <div id="category">
+            <ul>
+                <li style="font-size :40px; font-weight:1000; text-shadow: 5px 2px 20px white; margin-left: 10px;">Tech Stack</li>
+                <br>
+                <li style="list-style-image:url(image/bullet/HTML.png); margin-left: 12px;">HTML</li>
+                <li style="list-style-image:url(image/bullet/CSS.png); margin-left: 12px;">CSS</li>
+                <li style="list-style-image:url(image/bullet/JS.png); margin-left: 12px;">JavaScript</li>
+                <li style="list-style-image:url(image/bullet/JAVA.png); margin-left: 12px;">JAVA</li>
+                <li style="list-style-image:url(image/bullet/C.png); margin-left: 12px;">C</li>
+                <li style="list-style-image:url(image/bullet/CC.png); margin-left: 12px;">C#</li>
+                <li style="list-style-image:url(image/bullet/C++.png); margin-left: 12px;">C++</li>
+                <li style="list-style-image:url(image/bullet/Python.png); margin-left: 12px;">Python</li>
+            </ul>
+            <hr style="border:5px solid white; border-radius: 100px;">
+            <ul>
+                <li style="font-size :40px; font-weight:1000; text-shadow: 5px 2px 20px white; margin-left: 10px;">Tip</li>
+                <br>
+                <li style="list-style-image:url(image/bullet/github.png); margin-left: 12px;">For Github</li>
+                <li style="list-style-image:url(image/bullet/computer.png); margin-left: 12px;">For Computer</li>
+                <li style="list-style-image:url(image/bullet/internet.png); margin-left: 12px;">For Website</li>
+                <li style="list-style-image:url(image/bullet/programming.png); margin-left: 12px;">For Programming</li>
+                <li style="list-style-image:url(image/bullet/A.I.png); margin-left: 12px;">For A.I</li>
+                <li style="list-style-image:url(image/bullet/Study.png); margin-left: 12px;">For Study</li>
+                <li style="list-style-image:url(image/bullet/Blog.png); margin-left: 12px;">For Blog</li>
+            </ul>
+            <hr style="border:5px solid black; border-radius: 100px">
+            <ul>
+                <li style="font-size :40px; font-weight:1000; text-shadow: 5px 2px 20px white; margin-left: 10px;">Etc.</li>
+                <br> <!-- 리스트 이미지는 크기 조절이 가능하지 않다. 직접 조정해서 가져와야 하는 단점과 번거로움이 있음 -->
+                <li style="list-style-image:url(image/bullet/rest.png); margin-left: 12px;">Rest</li>
+                <li style="list-style-image:url(image/bullet/game.png); margin-left: 12px;">Game</li>
+                <li style="list-style-image:url(image/bullet/exercise.png); margin-left: 12px;">Exercise</li>
+                <li style="list-style-image:url(image/bullet/info.png); margin-left: 12px;">Information</li>
+                <li style="list-style-image:url(image/bullet/news.png); margin-left: 12px;">News</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 포스트 시작 -->
+<div class=postall>
+  <div class="posthalf">
+    <div id="post1" class="post"><img href="image/post/1.png"></div>
+    <div id="post2" class="post"><img href="image/post/2.png"></div>
+    <div id="post3" class="post"><img href=""></div>
+  </div>
+  <div class="posthalf2">
+    <div id="post4" class="post"><img href=""></div>
+    <div id="post5" class="post"><img href=""></div>
+    <div id="post6" class="post"><img href=""></div>
+  </div>
+</div>
+
+<div class="footer"><p>© 2024 <a href="https://github.com/Pear1yCode" style="text-decoration: none;"><span style="color:black; font-size : 20px; font-weight: 700;">Pear1yCode</span></a> All rights Reserved.<br>gh_wns@naver.com</p></div>
+<!-- 눈 내려요 자바스크립트 -->
+<script>
+for (let i = 0; i < 250; i++) {
+  const snow = document.createElement("div");
+  snow.className = "snow";
+  snow.style.opacity = Math.random();
+
+  const startX = Math.random() * 150;
+  const endX = startX + (Math.random() * 20 - 10);
+  const scale = Math.max(Math.random(), 0.5);
+
+  const keyframe = [
+    { transform: `translate(${startX}vw, 0) scale(${scale})` },
+    { transform: `translate(${endX}vw, 175vh) scale(${scale})` },
+  ];
+  const option = {
+    duration: 15000,
+    easing: "linear",
+    iterations: Infinity,
+    delay: -Math.random() * 20 * 1000,
+  };
+  snow.animate(keyframe, option);
+
+  document.body.appendChild(snow);
+}
+</script>
+<!-- 눈내려요 끝 -->
+ <!-- Floating Buttons -->
+<div class='float-button-container'>
+    <button  class="float-button">
+      <img class="float_button_image" src="image/menu/menu.png" />
+    </button>
+  </div>
+
+<div class='float-button-container2'>
+  <button class="float-button">
+    <img class="float_button_image2" src="image/menu/home.png" />
+  </button>
+  </div>
+ 
+  <div class='float-button-container3'>
+<button class="float-button">
+    <img class="float_button_image3" src="image/menu/book.png" />
+</button>
+</div>
+
+<div class='float-button-container4'>
+<button class="float-button">
+    <img class="float_button_image4" src="image/menu/discord color.png" />
+</button>
+</div>
+
+<div class='float-button-container5'>
+<button class="float-button">
+    <img class="float_button_image5" src="image/menu/up color.png" />
+</button>
+</div>
+<!-- 로고에 홈가는 설정 -->
+<script>
+  const $logo = document.getElementById('pearly');
+  $logo.onclick = () => location.href='main.html'; // 로고를 눌러도 홈으로 이동할 수 있도록 설정
+</script>
+  <!-- Floating Buttons End -->
+   <!-- 플로팅 버튼 펼치고 닫는 기능 생성
+    1번을 누르면 2번, 3번, 4번, 5번이 영향받을 수 있게 만들어봤다.
+   -->
+<script>
+const $float = document.querySelector('.float-button-container')
+const $float2 = document.querySelector('.float-button-container2')
+const $float3 = document.querySelector('.float-button-container3')
+const $float4 = document.querySelector('.float-button-container4')
+const $float5 = document.querySelector('.float-button-container5')
+
+$float.addEventListener('click', function(){
+    $float2.classList.toggle('hello');
+    $float3.classList.toggle('hello2');
+    $float4.classList.toggle('hello3');
+    $float5.classList.toggle('hello4');
+});
+// 플로팅 버튼 펼치고 닫는 기능 생성 끝 -> CSS로 이동해서 세부설정 //
+// 각 버튼에 기능 추가
+$float2.onclick = () => location.href='main.html'; // 홈으로 돌아가기
+$float3.onclick = () => location.href='post.html'; // post.html로 연결 - 세부 글
+$float4.onclick = () => location.href='https://discord.gg/jeFrzzS4ER' // 내가만든 디코 코딩 공부 서버로 연결
+$float5.onclick = () => window.scrollTo(0,0); // 가장 최상단 이동
+// 버튼 기능 끝
+</script>
+</body>
+</html>
