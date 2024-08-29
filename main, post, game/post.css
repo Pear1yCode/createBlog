@@ -65,6 +65,32 @@ li:hover {
         transform: rotate(0deg);
     }
 }
+/* 에펙에서 사용되는 null처럼 사용하려고 만든  sticky div Start  */
+.sticky {
+    /* sticky 사용시 스크롤하면 잘려보이는데 높이차이가 있어 그렇기 때문에 height값을 주면 잘림이 없이 사용할 수 있다. */
+    width: 0px; /* inline 블럭으로 변경해서 오른쪽에 post가 위치할 수 있지만 해당 div 때문에 우측으로 밀리므로 px 조절을 통해 좌측으로 post를 땡겨줄 수 있는 기능 */
+    height: 500px; /*sticky가 어디까지 내려오게할 지 정할 수 있음 - 사이드바에 대한 sticky */
+    position: sticky;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    display: inline-block;
+    z-index:1; /* 여기서 z-index를 준 이유 : width를 0으로 하고 inline-block을 사용해서 우측에 있던 allpost block이 inline-block으로 들어왔으나 그 안에 있는 틀을 잡는 posthalf에 있는 내부 block 요소가 해당 공간을 덮으면서
+    사이드 바를 누를 수 없는 상황이 발생하여 z-index를 1을 주고 posthalf에 z-index:0을 줘서 사이드바가 더 앞에 있도록 설정하였다. */
+}
+.sticky2 {
+    /* sticky 사용시 스크롤하면 잘려보이는데 높이차이가 있어 그렇기 때문에 height값을 주면 잘림이 없이 사용할 수 있다. */
+    width: 0px; /* 에펙에서 사용되는 null처럼 사용되고 있는 sticky div  */
+    height: 1525px; /* sticky 조정 - post글에 대한 sticky */
+    position: sticky;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    display: inline-block;
+}
+/* sticky div End  */
 
 .leftmain {
     width : 397px;
@@ -77,10 +103,11 @@ li:hover {
     align-items: center;
     position:absolute;
     border-radius: 25px;
+    top:0px;
 }
 
 .sidebar {
-    background-color: 679FE7px;
+    background-color: #3760C9;
     width :358px;
     height : 1750px;
     float:left;
@@ -96,30 +123,32 @@ li:hover {
 
 #pearly {
     width : 100%;
-    margin-top:-180px;
+    transform: translateY(-180px);
+    cursor:pointer;
 }
 
 .profile {
-    margin-top: -500px;
+    transform : translateY(-375px);
     width : 200px;
     border-radius: 9999px;
     z-index : 1; /* 이건 약간 어떤게 더 앞으로 오고 어떤게 더 뒤로가는 순서를 정하는 것 같다. */
     position: absolute;
+    cursor: pointer;
 }
 
 #welcome {
-    margin-top: -1200px;
+    margin-top: -1000px;
+    transform : translateY(-15px);
     position : absolute;
     font-size : 30px;
     font-weight: 700;
-    margin-left: 5px;
     text-decoration: underline;
 }
 
 .visit {
     text-align: center;
     color :white;
-    margin-top: -800px;
+    transform : translateY(-350px);
     position : absolute;
     background-color: rgba(79, 146, 122, 0.5);
     width : 300px;
@@ -132,7 +161,7 @@ li:hover {
     width : 335px;
     height : 1000px;
     border-radius: 50px;
-    margin-top: 500px;
+    transform : translateY(300px);
     position:absolute;
     border: 2px solid rgb(90, 111, 182);
 }
@@ -146,11 +175,11 @@ li {
 /* 눈 내려요 */
 .snow {
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
     background: white;
     border-radius: 50%;
-    box-shadow: 0 0 3px 3px white;
+    box-shadow: 0 0 15px 5px white;
     z-index: 1;
   }
 /* 끝 */
@@ -169,7 +198,7 @@ li {
     height: 100px;
     border: 5px solid rgba(109, 222, 241, 0.7);
     border-radius: 15px;
-    bottom: -800px;
+    bottom: -1250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -363,8 +392,57 @@ li {
 .posthalf {
     margin-top:70px;
     width : 1700px;
+    z-index:0;
+    /* 여기서 z-index를 준 이유 : width를 0으로 하고 inline-block을 사용해서 우측에 있던 allpost block이 inline-block으로 들어왔으나 그 안에 있는 틀을 잡는 posthalf에 있는 내부 block 요소가 해당 공간을 덮으면서
+    사이드 바를 누를 수 없는 상황이 발생하여 z-index를 1을 주고 posthalf에 z-index:0을 줘서 사이드바가 더 앞에 있도록 설정하였다. */
 }
 .posthalf2 {
     margin-top : 70px;
     width : 1700px;
+    z-index:0; /* 크롬으로 검사했을 때 이 부분은 겹치는 부분이 아니지만 문재 발생 여지가 있을 수 있으므로 똑같이 0으로 주었다. 따라서 사이드바(z-index:1;)가 더 우선순위로 올라간다. */
 }
+
+/* 프로그레스바 시작 */
+#mybar { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 7px; /* 프로그레스 바 굵기 */
+    z-index: 9999;
+    transition: all .1.5s ease;
+    background: linear-gradient(100deg, #b6aaff, #b9fff0); /* 프로그레스 바 그라데이션 색상 */
+  }
+  /* 프로그레스바 시작 끝 */
+
+  /* 마지막 로딩 */
+.loading {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	display: flex;
+	background: rgb(255, 255, 255);
+	z-index: 999;
+	opacity: 0.7;
+    animation: gifadeout ease-in 3s;
+    animation-fill-mode: forwards;
+    z-index:0;
+}
+.loading > img {
+	display: flex;
+	width: fit-content;
+	height: fit-content;
+	margin: auto;
+	box-shadow: none;
+}
+
+@keyframes gifadeout {
+    0% {
+        opacity : 0.7
+    }
+    100% {
+        opacity : 0
+    }
+};

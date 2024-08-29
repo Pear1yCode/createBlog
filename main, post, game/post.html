@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="post.css">
 </head>
 <body>
+<script src="snow.js"></script>
+<!-- 프로그레스바 -->
+<div id="mybar"></div>
+<script>function myBar(){const a=(document.body.scrollTop||document.documentElement.scrollTop)/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100;document.getElementById("mybar").style.width=a+"%"}window.onscroll=function(){myBar()};</script>
+<!-- 프로그레스바 끝 -->
+<div class="sticky">
 <div class="leftmain">
-    <div class="sidebar"><img id="blossom" src="image/logo.png"><img id="pearly" src="image/logoname.png"></div>
-        <div class="profile"><a href="https://github.com/Pear1yCode"><img class="profile" src="image/profile.jfif"></a></div>
+    <div class="sidebar"><img id="blossom" src="image/logo.png" alt="로고사진"><img id="pearly" src="image/logoname.png" alt="로고"></div>
+        <div class="profile"><a href="https://github.com/Pear1yCode"><img class="profile" src="image/profile.jfif" alt="프로필"></a></div>
         <p id="welcome">Hello<span id="welcome2">!</span></p>
         <div class="visit">
             <h2 class="announcement" style="text-shadow:5px 5px 10px black; text-decoration: underline; text-decoration-color: white ; text-decoration-thickness: 15px;">공지사항</h1>
@@ -60,75 +66,50 @@
     </div>
 </div>
 <!-- 포스트 시작 -->
+ <div class="sticky2">
 <div class=postall>
   <div class="posthalf">
-    <div id="post1" class="post"><img src="image/post/1.png"></div>
-    <div id="post2" class="post"><img src="image/post/2.png"></div>
-    <div id="post3" class="post"><img href=""></div>
+    <a href="posting.html"><div id="post1" class="post"><img src="image/post/1.png" alt="배경화면 01"></div></a>
+    <div id="post2" class="post"><img src="image/post/2.png" alt="배경화면 02"></div>
+    <div id="post3" class="post"><img src="image/post/3.png" alt="배경화면 03"></div>
   </div>
   <div class="posthalf2">
-    <div id="post4" class="post"><img src=""></div>
-    <div id="post5" class="post"><img src=""></div>
-    <div id="post6" class="post"><img src=""></div>
+    <div id="post4" class="post"><img src="image/post/4.png" alt="배경화면 04"></div>
+    <div id="post5" class="post"><img src="image/post/5.png" alt="배경화면 05"></div>
+    <div id="post6" class="post"><img src="image/post/6.png" alt="배경화면 06"></div>
   </div>
 </div>
-
+</div>
 <div class="footer"><p>© 2024 <a href="https://github.com/Pear1yCode" style="text-decoration: none;"><span style="color:black; font-size : 20px; font-weight: 700;">Pear1yCode</span></a> All rights Reserved.<br>gh_wns@naver.com</p></div>
-<!-- 눈 내려요 자바스크립트 -->
-<script>
-for (let i = 0; i < 250; i++) {
-  const snow = document.createElement("div");
-  snow.className = "snow";
-  snow.style.opacity = Math.random();
 
-  const startX = Math.random() * 150;
-  const endX = startX + (Math.random() * 20 - 10);
-  const scale = Math.max(Math.random(), 0.5);
-
-  const keyframe = [
-    { transform: `translate(${startX}vw, 0) scale(${scale})` },
-    { transform: `translate(${endX}vw, 175vh) scale(${scale})` },
-  ];
-  const option = {
-    duration: 15000,
-    easing: "linear",
-    iterations: Infinity,
-    delay: -Math.random() * 20 * 1000,
-  };
-  snow.animate(keyframe, option);
-
-  document.body.appendChild(snow);
-}
-</script>
-<!-- 눈내려요 끝 -->
  <!-- Floating Buttons -->
 <div class='float-button-container'>
     <button  class="float-button">
-      <img class="float_button_image" src="image/menu/menu.png" />
+      <img class="float_button_image" src="image/menu/menu.png" alt="menu 호출 버튼"/>
     </button>
   </div>
 
 <div class='float-button-container2'>
   <button class="float-button">
-    <img class="float_button_image2" src="image/menu/home.png" />
+    <img class="float_button_image2" src="image/menu/home.png" alt="home 버튼" />
   </button>
   </div>
  
   <div class='float-button-container3'>
 <button class="float-button">
-    <img class="float_button_image3" src="image/menu/book.png" />
+    <img class="float_button_image3" src="image/menu/book.png" alt="글 버튼" />
 </button>
 </div>
 
 <div class='float-button-container4'>
 <button class="float-button">
-    <img class="float_button_image4" src="image/menu/discord color.png" />
+    <img class="float_button_image4" src="image/menu/discord color.png" alt="dicord 버튼" />
 </button>
 </div>
 
 <div class='float-button-container5'>
 <button class="float-button">
-    <img class="float_button_image5" src="image/menu/up color.png" />
+    <img class="float_button_image5" src="image/menu/up color.png" alt="up 버튼" />
 </button>
 </div>
 <!-- 로고에 홈가는 설정 -->
@@ -161,5 +142,9 @@ $float4.onclick = () => location.href='https://discord.gg/jeFrzzS4ER' // 내가�
 $float5.onclick = () => window.scrollTo(0,0); // 가장 최상단 이동
 // 버튼 기능 끝
 </script>
+<!-- 마지막 로딩화면 -->
+<div class="loading">
+  <img src="image/gif/loading.gif" alt="loading">
+</div>
 </body>
 </html>

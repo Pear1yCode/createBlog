@@ -13,13 +13,14 @@ body {
     background-image: url(image/background.jpg);
     background-size : cover;
     height: 100vh;
-    width: 100%;
+    width: 2000;
     position: relative;
 }
 .announcement:hover {
     color: yellow;
     cursor: pointer;
 }
+
 .game {
     margin-left:-52px;
 }
@@ -42,7 +43,6 @@ body {
         transform: rotate(0deg);
     }
 }
-
 .games {
     color:violet;
 }
@@ -68,7 +68,7 @@ li:hover {
 
 .sticky {
     /* sticky 사용시 스크롤하면 잘려보이는데 높이차이가 있어 그렇기 때문에 height값을 주면 잘림이 없이 사용할 수 있다. */
-    height: 500px;
+    height: 200px;
     position: sticky;
     top:0px;
     bottom:0px;
@@ -78,65 +78,70 @@ li:hover {
 
 .leftmain {
     width : 397px;
-    height : 1750px;
+    height : 1700px;
     float:left;
     background-color: rgba(151, 182, 221, 0.5);
+    border-radius: 25px;
     /* 내부(상하좌우)를 중앙정렬하는 좋은 세트 3가지 // 가장 부모 영역에 설정 */
     display: flex;
     justify-content: center;
     align-items: center;
-    position:absolute;
-    border-radius: 25px;
-    top:0px;
+    z-index:10;
 }
 
 .sidebar {
     background-color: #679FE7;
     width :358px;
-    height : 1750px;
+    height : 1650px;
     float:left;
     background-color: rgba(103, 159, 231, 0.5);
     border-radius: 50px;
+    z-index:1
 }
 
 #blossom {
     border-radius: 50px;
     width:358px;
     height:110px;
+    z-index:100
 }
 
 #pearly {
     width : 100%;
     transform: translateY(-180px);
-    cursor:pointer;
+    z-index:1;
+    cursor : pointer;
 }
 
 .profile {
-    transform : translateY(-375px);
+    transform : translateY(-350px);
     width : 200px;
     border-radius: 9999px;
-    z-index : 1; /* 이건 약간 어떤게 더 앞으로 오고 어떤게 더 뒤로가는 순서를 정하는 것 같다. */
+    z-index : 100; /* 이건 약간 어떤게 더 앞으로 오고 어떤게 더 뒤로가는 순서를 정하는 것 같다. */
     position: absolute;
+    z-index:1;
 }
 
 #welcome {
-    transform : translateY(-530px);
+    transform : translateY(-480px);
     position : absolute;
     font-size : 30px;
     font-weight: 700;
     margin-left: 5px;
     text-decoration: underline;
+    z-index:100;
 }
 
 .visit {
     text-align: center;
     color :white;
-    transform : translateY(-350px);
+    transform : translateY(-320px);
     position : absolute;
     background-color: rgba(79, 146, 122, 0.5);
     width : 300px;
     height : 250px;
     border-radius: 50px;
+    z-index:100;
 }
 
 #category {
@@ -144,153 +149,45 @@ li:hover {
     width : 335px;
     height : 1000px;
     border-radius: 50px;
-    transform : translateY(300px);
+    transform : translateY(325px);
     position:absolute;
     border: 2px solid rgb(90, 111, 182);
+    z-index:100;
 }
 
 li {
     list-style-type:none;
     font-weight: 700;
     line-height: 35px;
+    z-index:100;
 }
 
-.main {
-    top: 0px;
-    border-radius: 50px;
-    margin-left: 400px;
-    width:1490px;
-    height:1625px;
-    background-image: url(image/background/bubble.jpg);
-    background-size: cover;
-    opacity:0.5;
-    position : absolute;
-    animation : fadein ease 15s;
-    animation-fill-mode:forwards;
-}
-
-.main2 {
-    top: 0px;
-    border-radius: 50px;
-    margin-left: 400px;
-    width:1490px;
-    height:1625px;
-    background-image: url(image/background/nature.jpg);
-    background-size: cover;
-    opacity:0.5;
-    position : absolute;
-    animation : fadeout ease 10s;
-    animation-fill-mode:forwards;
-}
-
-.main3 {
-    top: 0px;
-    border-radius: 50px;
-    margin-left: 400px;
-    width:1490px;
-    height:1625px;
-    background-image: url(image/background/morning.jpg);
-    background-size: cover;
-    opacity:0.5;
-    position : absolute;
-    animation : fadeout ease 10s;
-    animation-fill-mode:forwards;
-}
-
-.main4 {
-    top: 0px;
-    border-radius: 50px;
-    margin-left: 400px;
-    width:1490px;
-    height:1625px;
-    background-image: url(image/background/bubble2.jpg);
-    background-size: cover;
-    opacity:0.5;
-    position : absolute;
-    animation : fadeout2 ease 5s;
-    animation-fill-mode:forwards;
-}
-
-.main5 {
-    top: 0px;
-    border-radius: 50px;
-    margin-left: 400px;
-    width:1490px;
-    height:1625px;
-    background-image: url(image/background/town.jpg);
-    background-size: cover;
-    opacity:0.5;
-    position : absolute;
-    animation : fadeout ease 15s;
-    animation-fill-mode:forwards;
-}
-
-.main6 {
-    top: 0px;
-    border-radius: 50px;
-    margin-left: 400px;
-    width:1490px;
-    height:1625px;
-    background-image: url(image/background/snowhouse.jpg);
-    background-size: cover;
-    opacity:0.5;
-    position : absolute;
-    animation : fadeout2 ease 10s;
-    animation-fill-mode:forwards;
-}
-
-@keyframes fadeout {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-    }
-    @keyframes fadeout2 {
-        from {
-          opacity: 0.5;
-        }
-        to {
-          opacity: 0;
-        }
-        }
-
-    @keyframes fadein {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 0.5;
-        }
-        }
 /* 눈 내려요 */
 .snow {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 2px;
+    height: 2px;
     background: white;
     border-radius: 50%;
-    box-shadow: 0 0 10px 5px white;
+    box-shadow: 0 0 10px 3px white;
     z-index: 1;
   }
 /* 끝 */
 
 .footer {
     /* 가장 하단으로 내리는 명령어 두가지인데 이상하게 더 내려가지 않았다. */
-    position: absolute; /* flex는 사용하면 스크롤이 많아지면 문제가 생긴다. */
     /* /* margin-top:1650px; */
-    margin-left : 397px;
+    margin-left : 447px;
     font-size : 20px;
     font-weight: 400;
     text-align: center;
     color:white;
     text-shadow : 15px 15px 25px black;
-    width : 1485px;
-    height: 100px;
+    width : 1130px;
+    height: 75px;
     border: 5px solid rgba(109, 222, 241, 0.7);
     border-radius: 15px;
-    bottom:-1250px;
+    bottom: -1500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -454,7 +351,222 @@ li {
   }
   /* 프로그레스바 시작 끝 */
 
-  /* 마지막 로딩 */
+/* posting 시작 */
+  .blank {
+    width : 1050px;
+    margin-top: 50px;
+    margin-left : 25px;
+    line-height: 40px;
+  }
+
+  .blank2 {
+    width : 1050px;
+    margin-top: 20px;
+    margin-left : 25px;
+  }
+.postingtitle {
+    width :1130px;
+    height: 200px;
+    border-radius: 50px;
+    background-color: hsla(213, 100%, 90%, 0.5); 
+    transform: translate(55px, -410px);
+    box-shadow: 5px 5px 5px black;
+}
+
+.posting {
+    width:1130px;
+    height:1700px;
+    border-radius: 50px;
+    background-color: #CBE2FF;
+    transform: translate(55px, -400px);
+    box-shadow: 5px 5px 5px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size : 30px;
+    line-height: 200px;
+    text-shadow : 5px 5px 5px black;
+    animation : fill ease-in 5s;
+    animation-fill-mode: forwards;
+    text-align: center;
+}
+@keyframes fill {
+    from { color: rgb(194, 217, 245);}
+    to { color: white;}
+}
+
+.comment {
+    width:1130px;
+    height:300px;
+    border-radius: 50px;
+    background-color: #CBE2FF;
+    transform: translate(55px, -375px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px white;
+}
+
+.front {
+    background-color: rgba(255, 255, 255, 0.5);
+    width : 1100px;
+    height : 275px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px black;
+}
+
+#front01 {
+    height: 1670px;
+}
+
+.postall {
+    transform: translateY(200px);
+    z-index:0;
+    width: 0px;
+    height:0px;
+    transform: translate(-275px, 175px);
+    position: absolute;
+    display:inline;
+    
+}
+
+#beauty {
+    box-sizing: border-box;
+    border-width: 2px 12px;
+    border-bottom-style: solid;
+    border-bottom-color : #6f00ff;
+    padding : 3px 10px;
+    border-left-style : solid;
+    border-left-color : #6f00ff;
+    margin : 5px 0px;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: 700;
+    color : black;
+}
+
+#beauty2 {
+    box-sizing: border-box;
+    border-width: 2px 12px;
+    border-bottom-style: solid;
+    border-bottom-color : #00ff88;
+    padding : 3px 10px;
+    border-left-style : solid;
+    border-left-color : #00ff88;
+    margin : 5px 0px;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: 700;
+    color : black;
+}
+
+/* 섬네일 글씨와 함께 나란히 작성용 style (float:left로 좌측 배열, clear:both로 글자와 나란히 배열 가능)*/
+.sumnail {
+    float:left;
+    clear:both;
+}
+
+table, th, td {
+    border: 5px solid rgb(116, 116, 116);
+    text-align: center;;
+    width :1050px;
+    font-weight: 700;
+    font-size:20px;
+    border-radius: 10px;
+}
+
+/* 표에서 번갈아가면서 색깔 변경 */
+tr:nth-child(even){
+    background-color: #000000;
+    color:white;
+}
+tr:nth-child(odd){
+    background-color: white;
+    color:black;
+}
+/* 표에서 번갈아가면서 색깔 변경 끝 */
+
+th {
+    font-size:25px;
+}
+
+.input01 {
+    border-radius: 25px;
+    text-align:center;
+}
+
+.input02 {
+    margin-top:10px;
+    width :1040px;
+    height: 35px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius : 25px;
+    text-align: center;
+}
+
+.commentside {
+    border-radius: 5px;
+    background-color: rgba(2, 225, 255, 0.25);
+    width:1050px;
+    height:125px;
+    text-align: center;
+    line-height: 125px;
+}
+
+.button {
+    margin-left: 1000px;
+}
+
+.button:hover {
+    box-shadow: 5px 5px 5px black;
+    animation: wiggle ease-out 1s;
+}
+
+/* 마크 색깔 변경 */
+mark {
+    background-color: rgb(212, 255, 148);
+    border-radius: 25px;
+}
+.index01 {
+    width : 250px;
+    margin-top : 300px;
+    margin-left : 30px;
+    position: absolute;
+    cursor:pointer;
+    color:#6f00ff;
+}
+
+.index02 {
+    width : 250px;
+    margin-top : 350px;
+    margin-left : 30px;
+    position: absolute;
+    cursor:pointer;
+    color:#00ff88;
+}
+
+.index {
+    width : 250px;
+    height: 250px;
+    position:sticky;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    transform: translateX(1170px);
+    display: inline-block;
+}
+
+.indeximg {
+    width : 320px;
+    position: absolute;
+    margin-top:200px
+}
+
+/* 마지막 로딩 */
 .loading {
 	width: 100%;
 	height: 100%;

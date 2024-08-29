@@ -35,7 +35,7 @@ body {
 }
 
 .wrapper:hover {
-  animation : wiggle 5s;
+  animation : wiggle 3s;
 }
 @keyframes wiggle {
   0% {
@@ -136,7 +136,7 @@ span {
 .hello {
   margin-left : 62px;
   position:absolute;
-  animation: fadeout ease 4s;
+  animation: fadeout ease-in 3s;
   animation-delay : 2s;
   animation-fill-mode : forwards; /*이걸 사용해야 페이드 아웃 후에 다시 돌아오지 않음 // 애니메이션 끝을 정하는 설정 */
 }
@@ -161,7 +161,7 @@ to {
   position:absolute;
   border : 10px solid rgb(92, 84, 212);
   border-radius : 15px;
-  animation:fadein 10s;
+  animation:fadein ease-in 7s;
   animation-fill-mode : forwards; /*필수*/
 
 }

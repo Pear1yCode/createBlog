@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="posting.css">
 </head>
 <body>
-<script src="snow.js"></script>
-<!-- 프로그레스바 -->
+  <script src="snow2.js"></script>
+  <!-- 프로그레스바 -->
 <div id="mybar"></div>
 <script>function myBar(){const a=(document.body.scrollTop||document.documentElement.scrollTop)/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100;document.getElementById("mybar").style.width=a+"%"}window.onscroll=function(){myBar()};</script>
 <!-- 프로그레스바 끝 -->
-<div class="sticky">
+    <div class="sticky">
 <div class="leftmain">
-    <div class="sidebar"><img id="blossom" src="image/logo.png" alt="로고이미지"><img id="pearly" src="image/logoname.png" alt="로고"></div>
+    <div class="sidebar"><img id="blossom" src="image/logo.png" alt="logo 배경"><img id="pearly" src="image/logoname.png" alt="logo"></div>
         <div class="profile"><a href="https://github.com/Pear1yCode"><img class="profile" src="image/profile.jfif" alt="프로필 사진"></a></div>
         <p id="welcome">Hello<span id="welcome2">!</span></p>
         <div class="visit">
@@ -65,43 +65,39 @@
         </div>
     </div>
 </div>
-</div>
-<div class="main"></div>
-<div class="main2"></div>
-<div class="main3"></div>
-<div class="main4"></div>
-<div class="main5"></div>
-<div class="main6"></div>
 
-<div class="footer"><p>© 2024 <a href="https://github.com/Pear1yCode" style="text-decoration:none;"><span style="color:black; font-size : 20px; font-weight: 700;">Pear1yCode</span></a> All rights Reserved.<br>gh_wns@naver.com</p></div>
+</div>
+
+<div class="footer"><p>© 2024 <a href="https://github.com/Pear1yCode" style="text-decoration: none;"><span style="color:black; font-size : 20px; font-weight: 700;">Pear1yCode</span></a> All rights Reserved.<br>gh_wns@naver.com</p></div>
+
  <!-- Floating Buttons -->
 <div class='float-button-container'>
     <button  class="float-button">
-      <img class="float_button_image" src="image/menu/menu.png" alt="menu button"/>
+      <img class="float_button_image" src="image/menu/menu.png" alt="메뉴열기" />
     </button>
   </div>
 
 <div class='float-button-container2'>
   <button class="float-button">
-    <img class="float_button_image2" src="image/menu/home.png" alt="home button" />
+    <img class="float_button_image2" src="image/menu/home.png" alt="홈버튼" />
   </button>
   </div>
  
   <div class='float-button-container3'>
 <button class="float-button">
-    <img class="float_button_image3" src="image/menu/book.png" alt="read posting button" />
+    <img class="float_button_image3" src="image/menu/book.png" alt="글" />
 </button>
 </div>
 
 <div class='float-button-container4'>
 <button class="float-button">
-    <img class="float_button_image4" src="image/menu/discord color.png" alt="discord button" />
+    <img class="float_button_image4" src="image/menu/discord color.png" alt="디스코드" />
 </button>
 </div>
 
 <div class='float-button-container5'>
 <button class="float-button">
-    <img class="float_button_image5" src="image/menu/up color.png" alt="up button" />
+    <img class="float_button_image5" src="image/menu/up color.png" alt="최상단" />
 </button>
 </div>
 <!-- 로고에 홈가는 설정 -->
@@ -134,9 +130,133 @@ $float4.onclick = () => location.href='https://discord.gg/jeFrzzS4ER' // 내가�
 $float5.onclick = () => window.scrollTo(0,0); // 가장 최상단 이동
 // 버튼 기능 끝
 </script>
+<!-- 포스팅 시작 -->
+ <div class="index"><img class="indeximg" src="image/menu/speechbubble.png" alt="목차">
+  <div class="index01">1. 지금까지 배운 축약어의 뜻과 풀네임 알아보기 01 (HTML)</div>
+  <div class="index02">2. 표로 작성한 축약어 및 풀네임 ( + 용도 ) <i>For HTML</i> </div>
+</div>
+<script>
+  const $index = document.querySelector('.index01');
+  $index.onclick = () => window.scrollTo(0,20);
+  const $index2 = document.querySelector('.index02');
+  $index2.onclick = () => window.scrollTo(0,750);
+  </script>
+<div class="postall">
+  <div class="postingtitle"><div class="title"><h1>프로그래밍 약어</h1></div></div>
+  <div class="posting">
+      <div class="front" id="front01">
+        <div class="blank">
+          <h2 id="beauty">지금까지 배운 축약어의 뜻과 풀네임 알아보기 01 (HTML) </h2>
+          <p style="font-size:20px; font-weight: 700;"><img src="image/post/1.png" class="sumnail" alt="섬네일">
+            &nbsp;&nbsp;&nbsp;지금까지 HTML, CSS , JavaScript를 배웠고 프론트엔드의 전반적인 부분을 배웠습니다.
+            
+            <br> 그래서 쉬어가면서 약간의 공부를 할겸 우리가 주로 사용하는 프로그래밍 언어의 줄임말이 어디서 나온 것인지 궁금하여<br>
+            
+            우리가 배웠던 부분에서의 코딩 언어를 알아보았고 그에 따른 정보를 표로 생성해보았습니다.<br>
+
+            전부 우리가 공부한 곳에서의 언어들이며 Abbreviation은 축약어, Full Name은 말 그대로 풀네임, Usage는 용도입니다.
+          <br>
+          사용도 하고있고 축약어와 용도는 알지만 정확한 풀네임을 알면 더 이해가는데 도움이 될 것 같아 복습할겸 재밌게 읽고 지나가면 좋을 것 같습니다.
+            <br>
+            <hr>
+            <br>
+          </p>
+          <h3 id="beauty2">표로 작성한 축약어 및 풀네임 ( + 용도 ) <i>For HTML</i> </h3>
+          <p style="font-size:20px; font-weight:700;">오늘은 <mark>HTML</mark>편으로 HTML의 세가지 정보로 나눈 표입니다.</p>
+          <table>
+            <tr style="background-color: aqua;">
+              <th>Abbreviation</th>
+              <th>Full Name</th>
+              <th>Usage</th>
+            </tr>
+            <tr>
+              <td>h</td>
+              <td><mark>h</mark>eading</td>
+              <td>제목</td>
+            </tr>
+            <tr>
+              <td>p</td>
+              <td><mark>p</mark>aragrpah</td>
+              <td>문단</td>
+            </tr>
+            <tr>
+              <td>pre</td>
+              <td><mark>pre</mark>formatted</td>
+              <td>미리 정의된 형식</td>
+            </tr>
+            <tr>
+              <td>nbsp</td>
+              <td><mark>N</mark>on <mark>b</mark>reaking <mark>Sp</mark>ace</td>
+              <td>공백 (띄어쓰기)</td>
+            </tr>
+            <tr>
+              <td>br</td>
+              <td>line <mark>br</mark>eak</td>
+              <td>줄바꿈</td>
+            </tr>
+            <tr>
+              <td>hr</td>
+              <td>A <mark>h</mark>orizon <mark>r</mark>ule</td>
+              <td>수평선</td>
+            </tr>
+            <tr>
+              <td>b</td>
+              <td><mark>b</mark>old</td>
+              <td>두껍게</td>
+            </tr>
+            <tr>
+              <td>i</td>
+              <td><mark>i</mark>talic</td>
+              <td>기울임</td>
+            </tr>
+            <tr>
+              <td>u</td>
+              <td><mark>u</mark>nderline</td>
+              <td>밑줄</td>
+            </tr>
+            <tr>
+              <td>sub</td>
+              <td><mark>sub</mark>script text</td>
+              <td>아래첨자</td>
+            </tr>
+            <tr>
+              <td>sup</td>
+              <td><mark>sup</mark>erscript text</td>
+              <td>위첨자</td>
+            </tr>
+            <tr>
+            <td>s</td>
+            <td><mark>s</mark>pecifies text</td>
+            <td>취소선</td>
+            </tr>
+            <tr>
+            <td>abbr</td>
+            <td><mark>abbr</mark>eviation</td>
+            <td>약어 & 두문자어</td>
+            </tr>
+          </table>
+          <p style="font-size:20px; font-weight: 700; text-align: center;">감사합니다 (__)</p>
+        </div>
+      </div>
+  </div>
+      <div class="comment">
+          <div class="front" id="front02">
+              <div class="blank2">
+                <label for="name">User Name</label><div style="width :120px; display: inline-block;"></div><label for="password">Password</label><br>
+                <input class="input01" type="text" id="name" placeholder="익명 아이디"><div style="width :15px; display: inline-block;"></div><input class="input01" type="password" id="password" placeholder="댓글 삭제 시 필요한 비밀번호">
+                <div style="height:5px;"></div>
+                <div class="commentside">댓글이 없습니다 😂</div>
+                <input class="input02" type="text" id="comment" placeholder="댓글입력창">
+                <input class="button" type="submit" name="confirm" value="입력" style="font-weight: 700; margin-top: 5px; border-radius: 50px; background-color: rgb(100, 187, 199); color:white;">
+              </div>
+          </div>
+      </div>
+      <a href="#"></a>
+</div>
+
 <!-- 마지막 로딩화면 -->
 <div class="loading">
-    <img src="image/gif/loading.gif" alt="loading">
-  </div>
+  <img src="image/gif/loading.gif" alt="loading">
+</div>
 </body>
 </html>
