@@ -480,12 +480,10 @@ table, th, td {
 
 /* 표에서 번갈아가면서 색깔 변경 */
 tr:nth-child(even){
-    background-color: #000000;
-    color:white;
+    background-color: lightskyblue;
 }
 tr:nth-child(odd){
-    background-color: white;
-    color:black;
+    background-color: lightblue;
 }
 /* 표에서 번갈아가면서 색깔 변경 끝 */
 
@@ -528,7 +526,7 @@ th {
 /* 마크 색깔 변경 */
 mark {
     background-color: rgb(212, 255, 148);
-    border-radius: 25px;
+    border-radius: 15px;
 }
 .index01 {
     width : 250px;
@@ -579,7 +577,7 @@ mark {
 	opacity: 0.7;
     animation: gifadeout ease-in 3s;
     animation-fill-mode: forwards;
-    z-index:0;
+    z-index:999;
 }
 .loading > img {
 	display: flex;
@@ -594,6 +592,7 @@ mark {
         opacity : 0.7
     }
     100% {
-        opacity : 0
+        opacity : 0;
+        display : none;
     }
 };

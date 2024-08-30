@@ -428,7 +428,7 @@ li {
 	opacity: 0.7;
     animation: gifadeout ease-in 3s;
     animation-fill-mode: forwards;
-    z-index:0;
+    z-index:999;
 }
 .loading > img {
 	display: flex;
@@ -440,9 +440,10 @@ li {
 
 @keyframes gifadeout {
     0% {
-        opacity : 0.7
+        opacity : 0.7;
     }
     100% {
-        opacity : 0
+        opacity : 0;
+        display : none;
     }
 };

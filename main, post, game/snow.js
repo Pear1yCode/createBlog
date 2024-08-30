@@ -9,7 +9,7 @@ for (let i = 0; i < 250; i++) {
 
   const keyframe = [
     { transform: `translate(${startX}vw, 0) scale(${scale})` },
-    { transform: `translate(${endX}vw, 175vh) scale(${scale})` }, // 눈 범위 height
+    { transform: `translate(${endX}vw, 225vh) scale(${scale})` }, // 눈 범위 height
   ];
   const option = {
     duration: 15000,

@@ -10,7 +10,12 @@
   <script src="snow2.js"></script>
   <!-- 프로그레스바 -->
 <div id="mybar"></div>
-<script>function myBar(){const a=(document.body.scrollTop||document.documentElement.scrollTop)/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100;document.getElementById("mybar").style.width=a+"%"}window.onscroll=function(){myBar()};</script>
+<script>
+  function myBar(){
+      const a=(document.body.scrollTop||document.documentElement.scrollTop)/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100;
+  document.getElementById("mybar").style.width=a+"%"
+  }window.onscroll=function(){myBar()};
+  </script>
 <!-- 프로그레스바 끝 -->
     <div class="sticky">
 <div class="leftmain">
@@ -176,7 +181,7 @@ $float5.onclick = () => window.scrollTo(0,0); // 가장 최상단 이동
             </tr>
             <tr>
               <td>p</td>
-              <td><mark>p</mark>aragrpah</td>
+              <td><mark>p</mark>aragraph</td>
               <td>문단</td>
             </tr>
             <tr>
@@ -239,6 +244,18 @@ $float5.onclick = () => window.scrollTo(0,0); // 가장 최상단 이동
         </div>
       </div>
   </div>
+  <div class="share">
+    <div style="position:absolute"><img style="width:65px; height:65px; transform: translate(1082px, -508px); cursor:pointer;" src="image/postico/share.png" alt="share"></div>
+    <div style="position:absolute"><img style="width:50px; height:50px; transform: translate(1030px, -500px); cursor:pointer;" src="image/postico/naveremail.png" alt="share1"></div>
+    <div style="position:absolute"><img style="width:50px; height:50px; transform: translate(970px, -500px); cursor:pointer;" src="image/postico/youtube.png" alt="share2"></div>
+    <div style="position:absolute"><img style="width:50px; height:50px; transform: translate(910px, -500px); cursor:pointer;" src="image/postico/insta.png" alt="share3"></div>
+    <div style="position:absolute"><img style="width:50px; height:50px; transform: translate(850px, -500px); cursor:pointer;" src="image/postico/facebook.png" alt="share4"></div>
+    <div style="position:absolute"><img style="width:50px; height:50px; transform: translate(790px, -500px); cursor:pointer; opacity:0.5" src="image/postico/twitter.png" alt="share5"></div>
+    <div style="position:absolute"><img style="width:50px; height:50px; transform: translate(790px, -500px); cursor:pointer;" src="image/postico/x.png" alt="share6"></div>
+
+
+
+    </div>
       <div class="comment">
           <div class="front" id="front02">
               <div class="blank2">

@@ -9,10 +9,30 @@
 <body>
     <h1>특정 위치를 클릭하면 홈으로 돌아갈 수 있습니다.</h1>
 
-    <a href="main.html"><div id="hide"></div></a>
-
     <script>
-        const $random = document.getElementById('hide')
-    </script>
+        for (let i = 0; i < 1; i++) {
+  const snow = document.createElement("div");
+  snow.className = "snow";
+
+  const startX = Math.random() * 90; // 눈 범위 width
+  const endX = startX + (Math.random() * 10);
+  const scale = Math.max(Math.random(), 10);
+
+  const keyframe = [
+    { transform: `translate(${startX}vw, 10vh) scale(${scale})` },
+    { transform: `translate(${endX}vw, 95vh) scale(${scale})` }, // 눈 범위 height
+  ];
+  const option = {
+    duration: 10000,
+    easing: "linear",
+    iterations: Infinity,
+    delay: -Math.random() * 20 * 1000,
+  };
+  snow.animate(keyframe, option);
+
+  document.body.appendChild(snow);
+  snow.onclick = () => location.href='main.html';
+}
+</script>
 </body>
 </html>
