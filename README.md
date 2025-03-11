@@ -1,2 +1,2 @@
 # myBlog
-blog html & css
+make blog concept
